@@ -1,0 +1,50 @@
+DROP DATABASE IF EXISTS finalProject;
+CREATE DATABASE finalProject;
+USE finalProject;
+
+CREATE TABLE user (
+    user_id INT UNSIGNED AUTO_INCREMENT NOT NULL,
+    firstName VARCHAR(40) NOT NULL,
+    lastName VARCHAR(40) NOT NULL,
+    email VARCHAR(60) UNIQUE NOT NULL,
+    phone VARCHAR(10) NOT NULL,
+    isActive BOOLEAN DEFAULT true,
+    password VARCHAR(20) NOT NULL,
+    date_created TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    date_updated TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    CONSTRAINT pk_user PRIMARY KEY (user_id)
+);
+
+ALTER TABLE user 
+    ADD COLUMN isActive BOOLEAN DEFAULT true,
+    ADD COLUMN date_created TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    ADD COLUMN date_updated TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP;
+
+CREATE TABLE product (
+    product_id TINYINT UNSIGNED AUTO_INCREMENT NOT NULL,
+    product VARCHAR(40) NOT NULL,
+    size ENUM("small", "medium", "large", "one size") DEFAULT "ONE SIZE",
+    category ENUM("clothing", "accessories") DEFAULT "clothing",
+    price FLOAT(5,2),
+    color_id TINYINT UNSIGNED NOT NULL,
+    imgUrl VARCHAR(40),
+    item_number CHAR(3) NOT NULL,
+    style_id TINYINT UNSIGNED NOT NULL,
+    date_created TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    date_updated TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    CONSTRAINT pk_product PRIMARY KEY (product_id),
+    CONSTRAINT fk_color FOREIGN KEY (color_id) REFERENCES color (color_id),
+    CONSTRAINT fk_style FOREIGN KEY (style_id) REFERENCES style (style_id)
+);
+
+CREATE TABLE color (
+    color_id TINYINT UNSIGNED AUTO_INCREMENT NOT NULL,
+    color VARCHAR(40) NOT NULL,
+    CONSTRAINT pk_color PRIMARY KEY (color_id)
+);
+
+CREATE TABLE style (
+    style_id TINYINT UNSIGNED AUTO_INCREMENT NOT NULL,
+    style VARCHAR(40) NOT NULL,
+    CONSTRAINT pk_style PRIMARY KEY (style_id)
+);

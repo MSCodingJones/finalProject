@@ -3,7 +3,7 @@ const About =()=> {
     return (
         <main className="main" id="aboutMain">
             <div className="container">
-                <h2>about</h2>
+                <h2>About</h2>
             </div>
         </main>
         

@@ -15,8 +15,13 @@ const App=()=> {
     const [ products, setProducts ] = useState([])
 
     useEffect(()=> {
-        setProducts(data)
+        const url = 'http://localhost:3005/api/product'
+
+        axios.get(url).then(res => setProducts(res.data))
+      //  setProducts(data)
     }, [])
+
+// console.log(product)
 
     return (
         <>
@@ -26,7 +31,7 @@ const App=()=> {
                 <Route path='/about' element={ <About />} />
                 <Route path='/Store' element={ <Store products={products} />} />
                 <Route path='/:store/:id' element={ <Item />} />
-                <Route path='*' element={ <ErrorPage />} />
+                <Route path='*' element={ <Error />} />
             </Routes>
             <Footer />
         </>

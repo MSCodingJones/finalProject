@@ -13,5 +13,3 @@ root.render(
         <App />
     </BrowserRouter>
 )
-
-export default Index

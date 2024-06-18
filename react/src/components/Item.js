@@ -1,4 +1,4 @@
-const Single =(props)=> {
+const Item =(props)=> {
 
     console.log(props)
 
@@ -20,4 +20,4 @@ const Single =(props)=> {
     )
 }
 
-export default Single
+export default Item

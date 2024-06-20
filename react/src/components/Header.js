@@ -7,14 +7,14 @@ const Header =()=> {
         <header className="header" id="header">
             <div className="container">
                 <div className="row">
-                    <div className="col-md-4">
+                    <div className="col-md-105">
                         <h1>EllaHoney</h1>
                     </div>
-                    <div className="col-md-8">
+                    <div className="col-md-127">
                         <nav className="nav justify-content-around" id="topNav">
-                            <Link to='/'>home</Link>
-                            <Link to='/about'>about</Link>
-                            <Link to='/store'>store</Link>
+                            <Link to='/'>Home</Link>
+                            <Link to='/about'>About</Link>
+                            <Link to='/store'>Store</Link>
                             <Outlet />
                         </nav>
                     </div>

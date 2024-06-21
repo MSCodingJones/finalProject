@@ -1,6 +1,19 @@
-const Item =(props)=> {
+import { useState, useEffect } from "react"
+import { useParams } from "react-router-dom"
+import axios from "axios"
 
-  console.log(props)
+const Item =()=> {
+
+    const [ item, setItem ] = useState({})
+    const params = useParams()
+
+    const url = `http://localhost:3005/api/store/${params.id}`
+
+    useEffect(()=> {
+        axios.get(url).then(res => setItem(res.data))
+    }, [])
+
+  console.log(item)
 
     return (
         <main className="main">

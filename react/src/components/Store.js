@@ -1,13 +1,29 @@
+import { useState, useEffect } from "react"
+import axios from 'axios'
+
 import Product from "./Product"
 
-const Store =({ products })=> {
+const Store =()=> {
+   
+    const [ products, setProducts ] = useState([])
+
+    useEffect(()=> {
+        const url = 'http://localhost:3005/api/product'
+
+        axios.get(url).then(res => setProducts(res.data))
+      //  setProducts(data)
+    }, [])
+
+ console.log(products)
 
     const productComponents = products.map(product => {
         return <Product 
-                    key={product.id}
-                    name={product.name}
+                    key={product.product_id}
+                    id={product.product_id}
+                    name={product.product}
                     size={product.size}
                     price={product.price}
+                    image={product.imgUrl}
                 />
     })
 

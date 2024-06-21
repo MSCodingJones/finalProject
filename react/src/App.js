@@ -12,16 +12,16 @@ import Item from './components/Item'
 
 const App=()=> {
 
-    const [ products, setProducts ] = useState([])
+//     const [ products, setProducts ] = useState([])
 
-    useEffect(()=> {
-        const url = 'http://localhost:3005/api/product'
+//     useEffect(()=> {
+//         const url = 'http://localhost:3005/api/product'
 
-        axios.get(url).then(res => setProducts(res.data))
-      //  setProducts(data)
-    }, [])
+//         axios.get(url).then(res => setProducts(res.data))
+//       //  setProducts(data)
+//     }, [])
 
-// console.log(product)
+// console.log(products)
 
     return (
         <>
@@ -29,8 +29,8 @@ const App=()=> {
             <Routes>
                 <Route path='/' element={ <Home />} />
                 <Route path='/about' element={ <About />} />
-                <Route path='/Store' element={ <Store products={products} />} />
-                <Route path='/:store/:id' element={ <Item />} />
+                <Route path='/store' element={ <Store />} />
+                <Route path='/store/:id' element={ <Item />} />
                 <Route path='*' element={ <Error />} />
             </Routes>
             <Footer />

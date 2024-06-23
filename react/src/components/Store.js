@@ -5,7 +5,7 @@ import Product from "./Product"
 
 const Store =()=> {
    
-    const [ products, setProducts ] = useState([])
+    const [ Products, setProducts ] = useState([])
 
     useEffect(()=> {
         const url = 'http://localhost:3005/api/product'

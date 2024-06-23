@@ -2,18 +2,18 @@ import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
 import axios from "axios"
 
-const Item =()=> {
+const SingleProduct =()=> {
 
-    const [ item, setItem ] = useState({})
+    const [ SingleProduct, setSingleProduct ] = useState({})
     const params = useParams()
 
     const url = `http://localhost:3005/api/store/${params.id}`
 
     useEffect(()=> {
-        axios.get(url).then(res => setItem(res.data))
+        axios.get(url).then(res => setSingleProduct(res.data))
     }, [])
 
-  console.log(item)
+  console.log(SingleProduct)
 
     return (
         <main className="main">
@@ -34,4 +34,4 @@ const Item =()=> {
     )
 }
 
-export default Item
+export default SingleProduct

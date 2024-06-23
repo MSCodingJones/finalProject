@@ -8,7 +8,7 @@ import Home from "./components/Home"
 import About from "./components/About"
 import Store from "./components/Store"
 import Error from './components/Error'
-import Item from './components/Item'
+import SingleProduct from './components/SingleProduct'
 
 const App=()=> {
 
@@ -30,7 +30,7 @@ const App=()=> {
                 <Route path='/' element={ <Home />} />
                 <Route path='/about' element={ <About />} />
                 <Route path='/store' element={ <Store />} />
-                <Route path='/store/:id' element={ <Item />} />
+                <Route path='/store/:id' element={ <SingleProduct />} />
                 <Route path='*' element={ <Error />} />
             </Routes>
             <Footer />

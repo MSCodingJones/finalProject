@@ -5,18 +5,18 @@ import Product from "./Product"
 
 const Store =()=> {
    
-    const [ Products, setProducts ] = useState([])
+    const [ product, setProduct ] = useState([])
 
     useEffect(()=> {
         const url = 'http://localhost:3005/api/product'
 
-        axios.get(url).then(res => setProducts(res.data))
+        axios.get(url).then(res => setProduct(res.data))
       //  setProducts(data)
     }, [])
 
- console.log(products)
+    console.log(product)
 
-    const productComponents = products.map(product => {
+    const productComponents = product.map(product => {
         return <Product 
                     key={product.product_id}
                     id={product.product_id}

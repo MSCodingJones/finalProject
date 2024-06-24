@@ -4,29 +4,28 @@ import axios from "axios"
 
 const SingleProduct =()=> {
 
-    const [ SingleProduct, setSingleProduct ] = useState({})
+    const [ singleProduct, setSingleProduct ] = useState({})
     const params = useParams()
 
-    const url = `http://localhost:3005/api/store/${params.id}`
+    const url = `http://localhost:3005/api/product/${params.id}`
 
     useEffect(()=> {
         axios.get(url).then(res => setSingleProduct(res.data))
     }, [])
 
-  console.log(SingleProduct)
+  console.log(singleProduct)
 
     return (
         <main className="main">
             <div className="container">
                 <div className="row">
                     <div className="col-md-6">
-                        <img src={`/images/${props.image}`} alt={props.name} className="img-fluid image figure-img" />
+                        <img src={`/images/${singleProduct.imgUrl}`} alt={singleProduct.product} className="img-fluid image figure-img" />
                     </div>
                     <div className="col-md-6">
-                        <h3>{props.name}</h3>
-                        <p>size: {props.size}</p>
-                        <p>price: ${props.price}</p>
-                        <h2> describe item</h2>
+                        <h3>{singleProduct.product}</h3>
+                        <p>size: {singleProduct.size}</p>
+                        <p>price: ${singleProduct.price}</p>
                     </div>
                 </div>
             </div>

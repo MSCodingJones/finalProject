@@ -4,7 +4,12 @@ body {
 
 h1 {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font: size 50px;
+    font: size 100px;
     color: purple;
     text-align:center;
+}
+
+.card {
+    border: 2px solid green;
+
 }

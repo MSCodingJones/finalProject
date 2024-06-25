@@ -1,9 +1,9 @@
 
 const AddUser =(props)=> {
     
-    const month = props.dateCreated.slice(5, 7)
+ //   const month = props.dateCreated.slice(5, 7)
 
-    const year = props.dateCreated.slice(0, 4)
+// const year = props.dateCreated.slice(0, 4)
 
     return (
         <div className="col-md-3">

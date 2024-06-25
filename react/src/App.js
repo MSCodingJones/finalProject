@@ -9,6 +9,7 @@ import About from "./components/About"
 import Store from "./components/Store"
 import Error from './components/Error'
 import SingleProduct from './components/SingleProduct'
+import CreateAccount from './components/User'
 
 const App=()=> {
 

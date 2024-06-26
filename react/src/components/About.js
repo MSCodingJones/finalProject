@@ -4,6 +4,7 @@ const About =()=> {
         <main className="main" id="aboutMain">
             <div className="container">
             <img src="/images/intro.JPG" alt="placeholder img" className="img-fluid image figure-img" />
+            
                 <h2>HOW ELLAHONEY BEGAN</h2>
 
                 <h3> Shaquella Jones founded EllaHoney when her four year old twins asked for a ballerina birthday party. Convinced she could create tutus better than the ones she saw in stores, Shaquella made two of the cutest ballerina tutus for her nieces. 

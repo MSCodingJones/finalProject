@@ -45,12 +45,12 @@ const Form =( { formData, handleChange, handleSubmit } )=> {
                             />
                         </div>
                         <div className="col-auto">
-                            <label htmlFor="username" className="form-label text-capitalize">create a username</label>
+                            <label htmlFor="phone" className="form-label text-capitalize">phone number</label>
                             <input 
                                 type="text"
-                                id="username"
-                                name="username"
-                                value={formData.username}
+                                id="phone"
+                                name="phone"
+                                value={formData.phone}
                                 onChange={handleChange}
                                 className="form-control"
                                 required

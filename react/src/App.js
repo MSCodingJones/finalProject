@@ -10,14 +10,14 @@ import Store from "./components/Store"
 import Error from './components/Error'
 import SingleProduct from './components/SingleProduct'
 import AddUser from './components/AddUser'
-import Form from "./components/Form"
+import Form from './components/Form'
 
 const App=()=> {
     const [ formData, setFormData ] = useState({
         fName: '',
         lName: '',
         email: '',
-        username: '',
+        phone: '',
         password: ''
     })
 

@@ -74,7 +74,8 @@ console.log(products)
                 <Route path='/about' element={ <About />} />
                 <Route path='/store' element={ <Store />} />
                 <Route path='/store/:id' element={ <SingleProduct />} />
-                <Route path='/adduser' element={ <Form />} />
+                <Route path='/adduser' element={ <Form formData={formData} handleChange={handleChange} handleSubmit={handleSubmit} />} />
+
                 <Route path='*' element={ <Error />} />
             </Routes>
             <Footer />

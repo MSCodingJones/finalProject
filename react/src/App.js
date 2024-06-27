@@ -12,6 +12,7 @@ import SingleProduct from './components/SingleProduct'
 import AddUser from './components/AddUser'
 import Form from './components/Form'
 
+
 const App=()=> {
     const [ formData, setFormData ] = useState({
         fName: '',
@@ -64,6 +65,7 @@ const App=()=> {
     //         setProducts(data)
     }, [])
 
+    
 console.log(products)
 
     return (
@@ -75,7 +77,6 @@ console.log(products)
                 <Route path='/store' element={ <Store />} />
                 <Route path='/store/:id' element={ <SingleProduct />} />
                 <Route path='/adduser' element={ <Form formData={formData} handleChange={handleChange} handleSubmit={handleSubmit} />} />
-
                 <Route path='*' element={ <Error />} />
             </Routes>
             <Footer />

@@ -14,7 +14,6 @@ const Card =(props)=> {
                         <div className="statbox d-flex justify-content-between">
                             <footer className="card-footer">
                                 <button className="btn btn=primary cart-btns text-capitalize d-block mx-auto">add to cart</button>
-
                             </footer>
                         </div>
                     </div>

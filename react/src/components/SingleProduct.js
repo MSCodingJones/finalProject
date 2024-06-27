@@ -26,6 +26,7 @@ const SingleProduct =()=> {
                         <h3>{singleProduct.product}</h3>
                         <p>size: {singleProduct.size}</p>
                         <p>price: ${singleProduct.price}</p>
+                        <button className="btn btn=primary cart-btns text-capitalize d-block mx-auto">add to cart</button>
                     </div>
                 </div>
             </div>
